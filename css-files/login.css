@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,300&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color:#2e0401;
+
+}
+.container{
+    position:relative;
+    max-width:430px;
+    width:100%;
+    background:#fff;
+    border-radius:10px;
+    box-shadow:0 5px 10px rgba(0,0,0,0,0.1);
+    overflow:hidden;
+    margin:0 20px; 
+}
+.container .forms{
+    display:flex;
+    align-items:center;
+    height:440px;
+    width:200%;
+    transition:height 0.2s ease;
+}
+
+.container .form{
+    width:50%;
+    padding:30px;
+    background-color: #fff;
+    transition:margin-left 0.18s ease;
+
+}
+.container.active .login{
+    margin-left:-50%;
+    opacity:0;
+    transition:margin-left 0.18s ease, opacity 0.15s ease;
+
+}
+.container.active .sinup{
+    opacity:1;
+    transition:opacity 0.2s ease;
+}
+.container.active .forms{
+    height:600px;
+}
+.container .form .title{
+
+position: relative;
+font-size: 27px;
+ font-weight: 600;
+}
+
+.form .title::before{
+
+content:"";
+position: absolute;
+left: 0;
+bottom: 0;
+height: 3px;
+width: 30px; 
+background-color: #02030f;
+border-radius: 25px;
+}
+.form .input-field{
+
+position: relative;
+height: 50px;
+width: 100%;
+margin-top: 30px;
+}
+
+.input-field input{ 
+position: absolute;
+height: 100%;
+width: 100%;
+padding: 0 35px;
+border: none; 
+outline: none;
+font-size: 16px;
+border-bottom:2px solid #ccc;
+border-top: 2px solid transparent;
+transition:all 0,2s ease;
+}
+.input-fieldinput:focus{
+    border-bottom-color:#02030f;
+
+}
+    
+.input-field i{
+position: absolute;
+top: 50%;
+    transform: translateY(-50%);
+     color:#999;
+    font-size: 23px;
+    transition: all 0.2s ease;
+}    
+.input-field input: focus ~ i{
+     color: #02030f;
+}
+.input-field i.showhidepw{
+    
+    right: 0;
+    cursor: pointer;
+    padding: 10px;
+}
+.input-field i.icon{
+    
+    left: 0;
+}
+    
+.form .checkbox-text{
+display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.checkbox-text .checkbox-content{
+display: flex; 
+align-content: center;
+
+} 
+.checkbox-content input{
+    margin: 0 8px -2px 4px; 
+    accent-color: #02030f;
+
+}
+.form .text{
+
+color: #333; 
+font-size: 14px;
+}
+.form a.text{
+color: #02030f;
+text-decoration: none;
+}
+
+.form a:hover{
+
+text-decoration: underline;
+
+}
+
+.form .button{
+
+margin-top: 35px;
+}
+.form .button input{
+    border:none;
+    color:#fff;
+    font-size:16px;
+    font-weight:500;
+    border-radius:6px;
+    background-color: #02030f;
+    cursor:pointer;
+    transition:all 0.3s ease;
+}
+.button input:hover{
+    background-color: #181a2c;
+}
+.form .login-signup{
+    margin-top:30px;
+    text-align:center;
+}
+.book-table {
+    overflow: hidden;
+}
+
+.book-table-shape img {
+    position: absolute;
+    top: -10px;
+    right: 73%;
+    width: 540px;
+}
+
+.book-table-shape.book-table-shape2 img {
+    left: 74%;
+    transform: scale(-1, 1);
+}
+
+.book-table-info {
+    margin: 30px 0 20px;
+}
+.sec-btn {
+    min-width: 120px;
+    min-height: 58px;
+    background: #000000;
+    box-shadow: 9px 9px 12px #2e0401, -9px -9px 12px #2e0401;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    color: #ffffff;
+    text-transform: capitalize;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    outline: none !important;
+    transition: 0.8s cubic-bezier(0.22, 0.78, 0.45, 1.02);
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    padding: 6px 30px;
+    bottom:0;
+    right:0;
+}
+a {
+    background-color: transparent;
+    text-decoration: none !important;
+    outline: none !important;
+}
+.sec-btn:hover {
+    border-color: #f08902;
+    box-shadow: inset 9px 9px 12px #2b2a28, inset -9px -9px 12px #000000;
+    color: #f08902;
+}
